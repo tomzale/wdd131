@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Benin City Info Page" />
+  <meta name="author" content="Thomas Etiuzale" />
+  <title>Benin City | Nigeria</title>
+  <link rel="stylesheet" href="styles/place.css" />
+</head>
+<body>
+  <header>
+    <h1>Benin City, Nigeria</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/Benin-City.webp" alt="Aerial view of Benin City" loading="lazy" width="800" height="450">
+    </section>
+
+    <section class="data data-section">
+      <h2>City Information</h2>
+      <p><span class="label">Country:</span> Nigeria</p>
+      <p><span class="label">Population:</span> 1.5 million</p>
+      <p><span class="label">Language:</span> English</p>
+      <p><span class="label">Currency:</span> Nigerian Naira (₦)</p>
+      <p><span class="label">Region:</span> Edo State</p>
+    </section>
+
+    <section class="weather weather-section">
+      <h2>Weather</h2>
+      <p><span class="label">Temperature:</span> <span class="value">25</span>°C</p>
+      <p><span class="label">Wind Speed:</span> <span class="value">15</span> km/h</p>
+      <p><span class="label">Wind Chill:</span> <span id="windchill">Calculating...</span></p>
+      <img src="images/weather.svg" alt="Weather Icon" class="icon-mobile">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Thomas Etiuzale | WDD 131</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/place.js"></script>
+</body>
+</html>
