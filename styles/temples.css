@@ -1,0 +1,93 @@
+/* temples.css – mobile-first styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #ffffff;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+header {
+  background: #003f5c;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.nav-menu a {
+  color: white;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.nav-menu a:hover {
+  background: #2d6a8f;
+  border-radius: 5px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+figure {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+footer {
+  background: #003f5c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
