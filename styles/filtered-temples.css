@@ -1,0 +1,116 @@
+:root {
+  --bg: #f4f4f4;
+  --primary: #003f5c;
+  --accent: #2d6a8f;
+  --text: #333;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+nav button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+nav button:hover,
+nav button:focus {
+  background: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.temple-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.temple-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.temple-info {
+  padding: 1rem;
+}
+
+.temple-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.temple-info p {
+  margin-bottom: 0.4rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: white;
+  background: var(--primary);
+  padding: 1rem;
+}
+
+body {
+  background: #eee;
+}
+
+.temple-card {
+  background: #fdfdfd;
+  margin: auto;
+  max-width: 90%;
+}
+
+.temple-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.temple-info p:first-of-type {
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
+
+.temple-info p:nth-of-type(2),
+.temple-info p:nth-of-type(3) {
+  color: #333;
+}
+
+.temple-info h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* For Responsiveness */
+@media (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}

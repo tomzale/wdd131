@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Enhanced LDS temples album with filtering and lazy loading" />
+  <meta name="author" content="Thomas Etiuzale" />
+  <title>Temple Album – Enhanced</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
+<body>
+  <header>
+    <h1>Temple Album – Enhanced</h1>
+    <nav>
+      <button data-filter="all">Home</button>
+      <button data-filter="old">Old</button>
+      <button data-filter="new">New</button>
+      <button data-filter="large">Large</button>
+      <button data-filter="small">Small</button>
+    </nav>
+  </header>
+
+  <main>
+    <div id="temple-cards" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Thomas Etiuzale • Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
