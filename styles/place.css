@@ -6,6 +6,7 @@
   --accent-color: #2d6a8f;
   --white: #ffffff;
   --font-main: 'Roboto', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
 }
 
 /* Reset */
@@ -16,11 +17,13 @@
 }
 
 body {
-  font-family: var(--font-main);
+  font-family: var(--font-secondary);
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--white);
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 header, footer {
@@ -29,6 +32,7 @@ header, footer {
   background-color: var(--primary-color);
   color: var(--white);
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 main {
@@ -37,9 +41,15 @@ main {
   gap: 1.5rem;
 }
 
+h1, h2 {
+  font-family: var(--font-main);
+}
+
 h2 {
   color: var(--primary-color);
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 img {
@@ -60,19 +70,10 @@ img {
   font-weight: bold;
 }
 
-.icon-mobile {
+.weather-icon {
   display: block;
   width: 30px;
   margin: 0.5rem auto;
-}
-
-/* Weather Emoji (wide view only) */
-.weather-section::before {
-  content: "⛅";
-  display: block;
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 0.5rem;
 }
 
 /* Responsive Layout */
@@ -89,19 +90,45 @@ img {
   }
 
   .hero img {
-    width: 100%;
-    height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 
-  .data-section,
-  .weather-section {
-    background-color: var(--secondary-color);
-    padding: 1rem;
+  .data,
+  .weather {
+    padding: 1.5rem;
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  footer {
-    font-size: 1rem;
+  /* Desktop weather icon using pseudo-element */
+  .weather h2::after {
+    content: "⛅";
+    margin-left: 10px;
+    font-size: 1.5rem;
   }
+
+  /* Hide SVG icon on desktop */
+  .weather-icon {
+    display: none;
+  }
+}
+
+/* Mobile-only styles */
+@media screen and (max-width: 767px) {
+  /* Hide desktop pseudo-element on mobile */
+  .weather h2::after {
+    content: none;
+  }
+  
+  /* Ensure SVG is visible on mobile */
+  .weather-icon {
+    display: block;
+  }
+}
+
+/* Footer styles */
+footer {
+  font-size: 1rem;
+  margin-top: 2rem;
 }

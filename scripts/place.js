@@ -2,27 +2,24 @@
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-// Wind chill calculator
-function calculateWindChill(tempF, speed) {
-  if (tempF <= 50 && speed > 3.0) {
-    const chill =
-      35.74 +
-      0.6215 * tempF -
-      35.75 * Math.pow(speed, 0.16) +
-      0.4275 * tempF * Math.pow(speed, 0.16);
-    return chill.toFixed(1) + "°F";
-  } else {
-    return "N/A";
-  }
+// Wind chill calculator for metric units
+function calculateWindChill(temp, windSpeed) {
+  // Metric formula: 13.12 + 0.6215*T - 11.37*V^0.16 + 0.3965*T*V^0.16
+  return (13.12 + 
+          0.6215 * temp - 
+          11.37 * Math.pow(windSpeed, 0.16) + 
+          0.3965 * temp * Math.pow(windSpeed, 0.16));
 }
 
-// Extract HTML values and calculate chill
+// Extract HTML values
 const tempC = parseFloat(document.querySelector('.weather .value:nth-of-type(1)').textContent);
 const windKmh = parseFloat(document.querySelector('.weather .value:nth-of-type(2)').textContent);
+const windChillElement = document.querySelector("#windchill");
 
-// Convert to Fahrenheit and MPH
-const tempF = (tempC * 9) / 5 + 32;
-const windMph = windKmh / 1.609;
-
-const windChill = calculateWindChill(tempF, windMph);
-document.querySelector("#windchill").textContent = windChill;
+// Calculate and display wind chill if conditions are met
+if (tempC <= 10 && windKmh > 4.8) {
+  const windChill = calculateWindChill(tempC, windKmh).toFixed(1);
+  windChillElement.textContent = `${windChill} °C`;
+} else {
+  windChillElement.textContent = "N/A";
+}
