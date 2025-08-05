@@ -1,0 +1,93 @@
+/* ===== BASE STYLES ===== */
+:root {
+  --dark-bg: #101726;
+  --darker-bg: #0a0f1a;
+  --accent: #4a6fff;
+  --gold: #ffd700;
+  --light: #e6f0ff;
+  --success: #4caf50;
+  --card-bg: rgba(25, 35, 60, 0.7);
+  --card-border: rgba(74, 111, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+  color: var(--light);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER STYLES ===== */
+.gamer-header {
+  background: rgba(10, 15, 26, 0.9);
+  padding: 2rem 0;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+}
+
+.logo i {
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+.logo h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.gamer-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+.gamer-header p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== FOOTER STYLES ===== */
+.gamer-footer {
+  background: rgba(10, 15, 26, 0.9);
+  padding: 1.5rem 0;
+  text-align: center;
+  border-top: 1px solid var(--accent);
+  margin-top: 2rem;
+}
+
+.gamer-footer p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

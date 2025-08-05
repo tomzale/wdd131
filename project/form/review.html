@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted | Zale Gamers Hub</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header class="gamer-header">
+    <div class="container">
+      <div class="logo">
+        <i class="fas fa-gamepad"></i>
+        <h1>Zale <span>Gamers</span> Hub</h1>
+      </div>
+      <h2>Review Submitted!</h2>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="confirmation-card">
+      <i class="fas fa-check-circle success-icon"></i>
+      <h2>Thank You, Gamer!</h2>
+      <p>Your feedback helps us improve gaming experiences for everyone.</p>
+      
+      <div class="review-count">
+        <i class="fas fa-chart-line"></i>
+        <p id="reviewCount">Total Reviews Submitted: Calculating...</p>
+      </div>
+      
+      <a href="form.html" class="btn">
+        <i class="fas fa-plus-circle"></i> Submit Another Review
+      </a>
+    </div>
+  </main>
+
+  <footer class="gamer-footer">
+    <div class="container">
+      <p>&copy; <span id="currentyear"></span> Zale Gamers Hub | <a href="../index.html"> Visit Home</a></p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year and last modified
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+    
+    // Review counter using localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+      // Get current count or initialize to 0
+      let count = localStorage.getItem('reviewCounter') || 0;
+      count = parseInt(count) + 1;
+      
+      // Store updated count
+      localStorage.setItem('reviewCounter', count);
+      
+      // Display with friendly message
+      const countDisplay = document.getElementById('reviewCount');
+      countDisplay.innerHTML = `Total Reviews Submitted: <strong>${count}</strong>`;
+      
+      // To Add animation for visual feedback
+      countDisplay.style.opacity = 0;
+      setTimeout(() => {
+        countDisplay.style.transition = 'opacity 0.5s ease';
+        countDisplay.style.opacity = 1;
+      }, 300);
+    });
+  </script>
+</body>
+</html>

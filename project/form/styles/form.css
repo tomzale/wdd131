@@ -1,0 +1,236 @@
+/* ===== FORM STYLES ===== */
+main {
+  padding: 2rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.8rem;
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.required {
+  color: #ff3860;
+  font-weight: bold;
+}
+
+select, 
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(20, 30, 50, 0.7);
+  border: 1px solid rgba(74, 111, 255, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--light);
+  transition: all 0.3s;
+}
+
+select:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(74, 111, 255, 0.2);
+}
+
+/* Rating section */
+.rating-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.rating-option {
+  flex: 1;
+  min-width: 100px;
+}
+
+.rating-option input[type="radio"] {
+  display: none;
+}
+
+.rating-option label {
+  display: block;
+  padding: 12px;
+  background: rgba(30, 45, 80, 0.6);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.rating-option input[type="radio"]:checked + label {
+  background: rgba(74, 111, 255, 0.2);
+  border-color: var(--accent);
+  color: var(--gold);
+  box-shadow: 0 0 15px rgba(74, 111, 255, 0.3);
+}
+
+.rating-option label:hover {
+  background: rgba(50, 70, 120, 0.8);
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.checkbox-group div {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+}
+
+/* Submit button */
+.submit-btn {
+  background: linear-gradient(135deg, var(--accent), #1d6fa5);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 15px rgba(74, 111, 255, 0.3);
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 111, 255, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Confirmation page */
+.confirmation-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: var(--success);
+  margin-bottom: 1.5rem;
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-30px);}
+  60% {transform: translateY(-15px);}
+}
+
+.confirmation-card h2 {
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.confirmation-card p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.review-count {
+  background: rgba(20, 30, 50, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.2rem;
+}
+
+.review-count i {
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent), #1d6fa5);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(74, 111, 255, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .rating-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rating-option label {
+    width: 100%;
+  }
+  
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group {
+    padding: 1.2rem;
+  }
+  
+  .confirmation-card {
+    padding: 2rem 1rem;
+  }
+}
