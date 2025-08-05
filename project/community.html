@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Community Hub - Zale Gamers</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/chat.css" />
+  <link rel="stylesheet" href="styles/quiz.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">ZALE<span>GAMERS</span></a>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" style="height:60vh;">
+    <div class="container hero-content">
+      <h1 class="hero-title">JOIN OUR GAMING COMMUNITY</h1>
+      <p class="hero-subtitle">Connect with fellow gamers, share strategies, and compete in challenges</p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY CHAT -->
+  <section class="section">
+    <div class="container">
+      <div class="chat-container">
+        <div class="chat-header">
+          <h2>Live Community Chat</h2>
+          <div class="online-count">42 gamers online</div>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input">
+          <input type="text" id="message-input" placeholder="Type your message..." />
+          <button id="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ SECTION -->
+  <section class="section quiz-section">
+    <div class="container">
+      <h2 class="quiz-title">CHARACTER QUIZ</h2>
+      <p class="quiz-subtitle">How well do you know your favorite fighters?</p>
+      <div class="quiz-grid">
+        <div class="quiz-card" data-character="KillerBean">
+          <div class="character-icon" style="background-image: url('images/kbean.jpeg');"></div>
+          <div class="character-name">Killer Bean</div>
+        </div>
+        <div class="quiz-card" data-character="Michael">
+          <div class="character-icon" style="background-image: url('images/michael.jpeg');"></div>
+          <div class="character-name">Michael</div>
+        </div>
+        <!-- Add more quiz-card blocks as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ MODAL -->
+  <div class="quiz-modal">
+    <div class="modal-content">
+      <span class="close-modal">✖</span>
+      <div class="quiz-progress"><div class="progress-bar"></div></div>
+      <h3 class="question-text">Loading question...</h3>
+      <div class="options-container"></div>
+      <div class="results-container" style="display:none;">
+        <h3 class="result-score"></h3>
+        <p class="result-message"></p>
+        <a id="subscribeBtn" class="btn" target="_blank" href="https://youtube.com/@zalegamers">Subscribe for More</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">CONTACT ZALE GAMERS</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label><input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label><input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label><textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn">SEND MESSAGE</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://youtube.com/@zalegamers" class="social-link" target="_blank">🎮</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Zale Gamers Hub | BYU‑I WDD131</p>
+        <p><a href="references.html">Image References</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/chat.js"></script>
+  <script src="scripts/quiz.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

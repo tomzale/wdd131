@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zale Gamers Hub - Home</title>
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">ZALE<span>GAMERS</span></a>
+
+      <!-- Hamburger Menu Button -->
+      <div class="hamburger" id="hamburger">
+        <div class="bar" style="width: 25px; height: 3px; background: var(--gold); margin: 5px 0;"></div>
+        <div class="bar" style="width: 25px; height: 3px; background: var(--gold); margin: 5px 0;"></div>
+        <div class="bar" style="width: 25px; height: 3px; background: var(--gold); margin: 5px 0;"></div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop>
+      <source src="images/Best emulators to play mobile game on pc.mp4" type="video/mp4" />
+      Your browser may not support the video tag.
+    </video>
+
+    <div class="container hero-content">
+      <h1 class="hero-title">NEW GAMING TUTORIALS LIVE NOW</h1>
+      <p class="hero-subtitle">Master Killer Bean combos and dominate the arena</p>
+      <a href="videos.html" class="btn">Watch Now</a>
+    </div>
+  </section>
+
+  <!-- ========== LATEST CONTENT SECTION ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Latest Content</h2>
+      <div class="content-grid">
+        <!-- Content card -->
+        <div class="content-card">
+          <div class="card-image" style="background-image: url('images/kbean.jpeg');"></div>
+          <div class="card-badge">NEW</div>
+          <div class="card-content">
+            <h3 class="card-title">Killer Bean Combo Guide</h3>
+            <div class="card-meta">
+              <span>15K Views</span>
+              <span>3 min</span>
+            </div>
+            <p class="card-description">Dominate with no weapons — this Killer Bean guide shows you how!</p>
+            <div class="card-btn">
+              <a href="videos.html" class="btn small">▶️ Watch</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- more contents -->
+           <div class="content-card">
+          <div class="card-image" style="background-image: url('images/kbean2.jpeg');"></div>
+          <div class="card-badge">NEW</div>
+          <div class="card-content">
+            <h3 class="card-title">Killer Bean Combo Guide</h3>
+            <div class="card-meta">
+              <span>15K Views</span>
+              <span>3 min</span>
+            </div>
+            <p class="card-description">A comprehensive guide to mastering Killer Bean's moves.</p>
+            <div class="card-btn">
+              <a href="blog.html" class="btn small"> 📖 Read Now</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://youtube.com/@zalegamers" class="social-link" target="_blank">🎮</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">🐦</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Zale Gamers Hub | BYU-I WDD131</p>
+        <p><a href="references.html">Image References</a></p>
+        <p><a href="siteplan.html">Wireframe</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== Some JS ========== -->
+   <!-- main.js has similar element but its not working for my mobile -->
+  <script>
+    // To toggle nav menu on mobile
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Zale Gamers Hub - About</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles/main.css"/>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">ZALE<span>GAMERS</span></a>
+      <div class="hamburger" id="hamburger"><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
+      <ul class="nav-menu" id="nav-menu"><li class="nav-item"><a href="index.html" class="nav-link">Home</a></li><li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li><li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li><li class="nav-item"><a href="about.html" class="nav-link">About</a></li><li class="nav-item"><a href="community.html" class="nav-link">Community</a></li></ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About Me & How to Join</h2>
+      <p>Hello! I’m Thomas, creator of this gaming community. On my YouTube channel I publish gameplay tutorials, memes, and character quizzes. Want to contribute? Submit your content to join the hub and grow with us!</p>
+      <!-- form to submit Information For Me -->
+      <a href="community.html" class="btn">Join the Community</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>Quick Links</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="videos.html">Videos</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div class="footer-col"><h3>Support</h3><ul class="footer-links"><li><a href="references.html">References</a></li></ul></div>
+        <div class="footer-col"><h3>Follow Us</h3><div class="social-links"><a href="https://youtube.com/@zalegamers" class="social-link" target="_blank">🎮</a></div></div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Zale Gamers Hub | BYU-I WDD131</p>
+        <p><a href="references.html">Image References</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', ()=>{ document.getElementById('nav-menu').classList.toggle('active'); });
+  </script>
+</body>
+</html>

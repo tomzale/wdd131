@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image References - Zale Gamers</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ✅ NAVIGATION BAR -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">ZALE<span>GAMERS</span></a>
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="videos.html" class="nav-link">Videos</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ✅ REFERENCES SECTION -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">REFERENCES</h2>
+      <div class="references-list">
+        <div class="reference-item">
+          <div class="ref-image" style="background-image: url('images/ZaleLogo.png'); height: 180px; width: 100%; background-size: cover; border-radius: 10px;"></div>
+          <div class="ref-details">
+            <h3>Videos & Articles</h3>
+            <p>Resources Used in This website Was Taken From The Official Zalegamer Website and Channel <br> Belongs Thomas Etiuzale Who is currently Working On This Project</p>
+            <a href="https://youtube.com/@zalegamers" target="_blank">View Source</a>
+          </div>
+        </div>
+        <div class="reference-item">
+          <div class="ref-image" style="background-image: url('images/kbean.jpeg'); height: 180px; width: 100%; background-size: cover; border-radius: 10px;"></div>
+          <div class="ref-details">
+            <h3>Killer Bean Images</h3>
+            <p>Images of Killer Bean and related content were sourced from the official Killer Bean website and fan art galleries.</p>
+            <a href="https://killerbean.com" target="_blank">View Source</a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="community.html">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="references.html">References</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="https://youtube.com/@zalegamers" class="social-link" target="_blank">🎮</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Zale Gamers Hub | BYU-I WDD131</p>
+        <p><a href="references.html">Image References</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
