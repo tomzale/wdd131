@@ -11,9 +11,11 @@ function calculateWindChill(temp, windSpeed) {
           0.3965 * temp * Math.pow(windSpeed, 0.16));
 }
 
-// Extract HTML values
-const tempC = parseFloat(document.querySelector('.weather .value:nth-of-type(1)').textContent);
-const windKmh = parseFloat(document.querySelector('.weather .value:nth-of-type(2)').textContent);
+// Extract HTML values correctly
+
+const values = document.querySelectorAll('.weather .value');
+const tempC = parseFloat(values[0].textContent);
+const windKmh = parseFloat(values[1].textContent);
 const windChillElement = document.querySelector("#windchill");
 
 // Calculate and display wind chill if conditions are met
@@ -23,3 +25,4 @@ if (tempC <= 10 && windKmh > 4.8) {
 } else {
   windChillElement.textContent = "N/A";
 }
+
